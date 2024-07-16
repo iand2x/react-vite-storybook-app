@@ -1,0 +1,30 @@
+.button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .small-button {
+    font-size: 14px;
+  }
+  
+  .large-button {
+    font-size: 18px;
+  }
+  
+  .text-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .small-text-field input {
+    font-size: 14px;
+    padding: 5px;
+  }
+  
+  .large-text-field input {
+    font-size: 16px;
+    padding: 8px;
+  }
+  
