@@ -5,22 +5,19 @@ export default {
   title: "Components/TextField",
   component: TextField,
   argTypes: {
-    size: {
-      options: ["small", "large"],
-      control: { type: "select" },
-    },
+    handleChange: { action: "test text" },
   },
 } as Meta;
 
-const Template: StoryFn = (args) => <TextField label={""} {...args} />;
+const Template: StoryFn = (args) => (
+  <TextField handleChange={undefined} label={""} {...args} />
+);
 
-export const Default = Template.bind({});
-Default.args = {
-  label: "Default TextField",
-};
-
-export const WithMaxLength = Template.bind({});
-WithMaxLength.args = {
-  label: "TextField with Max Length",
-  maxLength: 10,
+export const WithValidations = Template.bind({});
+WithValidations.args = {
+  label: "TextField with validations",
+  placeholder: "Enter username",
+  maxLength: 15,
+  minLength: 5,
+  size: "small",
 };

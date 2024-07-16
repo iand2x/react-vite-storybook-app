@@ -22,8 +22,9 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-
-    "allowSyntheticDefaultImports": true
+    "types": ["@testing-library/jest-dom"],
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
   },
-  "include": ["src"]
+  "include": ["src", "support/setupTests.ts", "support/jest-dom.d.ts"]
 }

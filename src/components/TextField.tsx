@@ -1,4 +1,4 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import PropTypes from "prop-types";
 
 interface TextFieldProps {
@@ -7,6 +7,7 @@ interface TextFieldProps {
   minLength?: number;
   placeholder?: string;
   size?: "small" | "large";
+  handleChange: any;
 }
 
 const TextField: FC<TextFieldProps> = ({
@@ -15,6 +16,7 @@ const TextField: FC<TextFieldProps> = ({
   minLength,
   placeholder,
   size = "small",
+  handleChange,
 }) => {
   const textFieldSize =
     size === "small" ? "small-text-field" : "large-text-field";
@@ -27,6 +29,7 @@ const TextField: FC<TextFieldProps> = ({
         maxLength={maxLength}
         minLength={minLength}
         placeholder={placeholder}
+        onBlur={handleChange}
       />
     </div>
   );
